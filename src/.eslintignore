@@ -1,0 +1,8 @@
+node_modules/
+build/
+coverage/
+*.config.ts
+*.md
+*.txt
+*.yml
+*.lock
