@@ -14,7 +14,8 @@ It's also recommended to maintain your own version of the template to ensure you
 [React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces  
 [TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding  
 [TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling  
-[ESLint](https://eslint.org/) with [airbnb-typescript config](https://github.com/airbnb/javascript) for creating excellent code that meets industry standards.
+[ESLint](https://eslint.org/) with [airbnb-typescript config](https://www.npmjs.com/package/eslint-config-airbnb-typescript) for creating excellent code that meets industry standards  
+[Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to ensure that code quality issues are detected before committing changes
 
 Additionally, the template comes with preconfigured settings, scripts, and folder structure that allows easy usage right out of the box.
 
