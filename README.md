@@ -22,7 +22,7 @@ Additionally, the template comes with preconfigured settings, scripts, and folde
 
 Before getting started, make sure you have a package manager like npm installed on your machine
 
-- [Create a new repository from this template](https://github.com/AlexTsimba/Vite-React-Boilerplate/generate)
+- [Create a new repository from this template](https://github.com/AlexTsimba/React-ts-tailwind-boilerplate/generate)
 - Clone the repository to your local machine using `git clone <repository-url>`
 - Navigate to the project directory by running `cd <project-name>`, then open it by running `code .`
 - Run `npm install` to install dependencies
