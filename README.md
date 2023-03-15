@@ -5,7 +5,7 @@
 This is a starter template that includes the most efficient practices I've learned after struggling with the setup of React apps.
 
 The project is designed to streamline development processes and exclude setup headaches,  
-allowing developer to focus on building the application logic without worrying about the underlying infrastructure. 
+allowing developer to focus on building the application logic without worrying about the underlying infrastructure.
 It's also recommended to maintain your own version of the template to ensure you have a reliable starting point for future React apps.
 
 ## What's inside?
@@ -14,8 +14,7 @@ It's also recommended to maintain your own version of the template to ensure you
 [React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces  
 [TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding  
 [TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling  
-[ESLint](https://eslint.org/) with [airbnb-typescript config](https://github.com/airbnb/javascript) for creating excellent code that meets industry standards.  
-
+[ESLint](https://eslint.org/) with [airbnb-typescript config](https://github.com/airbnb/javascript) for creating excellent code that meets industry standards.
 
 Additionally, the template comes with preconfigured settings, scripts, and folder structure that allows easy usage right out of the box.
 
@@ -40,7 +39,7 @@ The following scripts are available for linting and formatting your code:
 - `npm run format`: Formats your code using Prettier to ensure consistent and readable code.
 - `npm run fix-style`: Runs `format` and `lint --fix` sequentially to fix any formatting and style issues in your code.
 
-Make sure to have ESLint and Prettier plugins installed in your code editor to see linting and formatting errors and warnings. 
+Make sure to have ESLint and Prettier plugins installed in your code editor to see linting and formatting errors and warnings.
 It's recommended to run these scripts frequently during development to ensure that your code meets the standards.
 Additionally, these scripts can be run automatically during your CI/CD pipeline to catch any issues before your code is deployed.
 
@@ -53,4 +52,5 @@ Contributions are welcome! Here are some ways you can contribute:
 - Review and test pull requests submitted by other contributors.
 
 ## License
+
 This project is licensed under the MIT License.

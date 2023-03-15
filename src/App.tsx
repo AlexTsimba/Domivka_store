@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import ReactMarkdown from 'react-markdown';
 
 // mockup data
@@ -55,7 +54,8 @@ export default function App() {
         <div className=" text-center text-white">
           <div className="mx-auto flex max-w-3xl flex-col gap-8 text-left">
             <h1 className="text-center text-4xl font-bold">
-              <span>Jumpstart</span> your next&nbsp;
+              <span>Jumpstart </span>
+              your next&nbsp;
               <span className="bg-gradient-to-r from-skyblue to-violet-400 bg-clip-text text-transparent">
                 React project
               </span>
@@ -71,13 +71,8 @@ export default function App() {
 
         <ul className="grid grid-cols-6 justify-center gap-6 lg:grid-cols-3 lg:gap-8">
           {mockImagesAndLinks.map((item) => (
-            <li key={item.alt} >
-              <a
-                className=""
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <li key={item.alt}>
+              <a href={item.href} target="_blank" rel="noopener noreferrer">
                 <img
                   className="h-12 w-12 lg:h-16 lg:w-16"
                   src={item.src}
@@ -96,12 +91,12 @@ export default function App() {
       >
         Count is {counter}
       </button>
-      <div className="prose-input:my-0 prose prose-sm prose-invert prose-p:my-0">
+      <div className="prose prose-sm prose-invert prose-p:my-0">
         <h2 className="mb-8 text-center">To clean up template:</h2>
         <ul className="list-none">
           {mockText.map((item) => (
-            <li key={item} >
-              <label className="prose flex items-center prose-invert">
+            <li key={item}>
+              <label className="prose prose-invert flex items-center">
                 <input type="checkbox" className="mx-2 rounded-full" />
                 <ReactMarkdown>{item}</ReactMarkdown>
               </label>
