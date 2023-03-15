@@ -10,11 +10,12 @@ It's also recommended to maintain your own version of the template to ensure you
 
 ## What's inside?
 
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) For lightning-fast web app bundling and running  
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%242424) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) For building dynamic and scalable user interfaces  
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)  For type-safe and error-free coding  
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) For effortless and customizable styling  
-![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) + ![Airbnb](https://img.shields.io/badge/Airbnb-%23ff5a5f.svg?style=for-the-badge&logo=Airbnb&logoColor=white) For creating excellent code that meets industry standards
+[Vite](https://vitejs.dev/) for lightning-fast web app bundling and running  
+[React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces  
+[TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding  
+[TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling  
+[ESLint](https://eslint.org/) with [airbnb-typescript config](https://github.com/airbnb/javascript) for creating excellent code that meets industry standards.  
+
 
 Additionally, the template comes with preconfigured settings, scripts, and folder structure that allows easy usage right out of the box.
 
