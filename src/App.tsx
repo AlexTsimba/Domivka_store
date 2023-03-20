@@ -1,39 +1,20 @@
-import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { motion } from 'framer-motion';
+import eslintIcon from './public/tech-icons/ESLint-icon.svg';
+import prettierIcon from './public/tech-icons/Prettier-icon.svg';
+import reactIcon from './public/tech-icons/React-icon.svg';
+import tailwindIcon from './public/tech-icons/Tailwind-icon.svg';
+import typescriptIcon from './public/tech-icons/Typescript-icon.svg';
+import viteIcon from './public/tech-icons/Vite-icon.svg';
+import framermotionIcon from './public/tech-icons/framer-motion-icon.svg';
 
-// mockup data
-
-const mockImagesAndLinks = [
-  {
-    href: 'https://vitejs.dev/',
-    src: 'https://vitejs.dev/logo.svg',
-    alt: 'Vite logo',
-  },
-  {
-    href: 'https://reactjs.org/',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
-    alt: 'React logo',
-  },
-  {
-    href: 'https://www.typescriptlang.org/',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
-    alt: 'TypeScript logo',
-  },
-  {
-    href: 'https://tailwindcss.com/',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
-    alt: 'Tailwind CSS logo',
-  },
-  {
-    href: 'https://eslint.org/',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/1920px-ESLint_logo.svg.png',
-    alt: 'ESLint logo',
-  },
-  {
-    href: 'https://prettier.io/',
-    src: 'https://cdn.worldvectorlogo.com/logos/prettier-1.svg',
-    alt: 'Prettier logo',
-  },
+const techWheel = [
+  { name: 'Vite', src: viteIcon },
+  { name: 'Typescript', src: typescriptIcon },
+  { name: 'Tailwind', src: tailwindIcon },
+  { name: 'Framer-motion', src: framermotionIcon },
+  { name: 'ESLint', src: eslintIcon },
+  { name: 'Prettier', src: prettierIcon },
 ];
 
 const mockText = [
@@ -46,51 +27,82 @@ const mockText = [
 ];
 
 export default function App() {
-  const [counter, setCounter] = useState(0);
-
   return (
-    <div className="flex min-h-screen flex-col items-center justify-around bg-gradient-to-r from-gray-800 to-charcoal">
-      <div className="flex flex-col items-center justify-center gap-20 lg:flex-row">
+    <div className="flex min-h-screen flex-col items-center justify-around bg-gradient-to-r from-gray-800 to-charcoal p-10">
+      <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:gap-20">
         <div className=" text-center text-white">
           <div className="mx-auto flex max-w-3xl flex-col gap-8 text-left">
-            <h1 className="text-center text-4xl font-bold">
+            <h1 className="text-left text-4xl font-bold">
               <span>Jumpstart </span>
               your next&nbsp;
               <span className="bg-gradient-to-r from-skyblue to-violet-400 bg-clip-text text-transparent">
                 React project
               </span>
             </h1>
-            <p className="text-center text-sm text-gray-400 md:text-base">
-              This template is built with Vite and includes essential tools like
-              <br />
-              TypeScript, Tailwind, ESLint, and Prettier to help you start
-              coding with ease.
+            <p className="prose prose-invert">
+              Template comes with: Typescript, Tailwind, Husky, ESLint, Prettier
+              and more. <br />
+              Configured and ready to go 🚀
             </p>
           </div>
         </div>
 
-        <ul className="grid grid-cols-6 justify-center gap-6 lg:grid-cols-3 lg:gap-8">
-          {mockImagesAndLinks.map((item) => (
-            <li key={item.alt}>
-              <a href={item.href} target="_blank" rel="noopener noreferrer">
-                <img
-                  className="h-12 w-12 lg:h-16 lg:w-16"
-                  src={item.src}
-                  alt={item.alt}
-                  loading="lazy"
-                />
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex h-60 w-60 items-center justify-center">
+          {techWheel.map((tech, index: number) => {
+            return (
+              <motion.div
+                className="fixed h-1/4 overflow-hidden"
+                key={tech.name}
+                initial="initial"
+                animate={['animate', 'initialHide']}
+                variants={{
+                  initial: {
+                    opacity: 0,
+                  },
+                  initialHide: {
+                    opacity: 1,
+                    transition: {
+                      delay: index + 1,
+                    },
+                  },
+                  animate: {
+                    rotate: -360,
+                    transition: {
+                      duration: techWheel.length,
+                      repeat: Infinity,
+                      delay: index + 1,
+                      ease: 'linear',
+                    },
+                  },
+                }}
+              >
+                <div className="h-8">
+                  <img
+                    className="pointer-events-none h-8"
+                    src={tech.src}
+                    alt={tech.name}
+                  />
+                </div>
+              </motion.div>
+            );
+          }, [])}
+
+          <motion.div
+            className="fixed h-20 w-20"
+            initial={{ opacity: 1 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+          >
+            <div>
+              <img
+                className=" pointer-events-none absolute top-0 left-0 h-20 w-20"
+                src={reactIcon}
+                alt="react"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
-      <button
-        type="button"
-        className="bd-gradient-to-r w-30 text-md bg-transparen rounded-lg border px-5 py-2.5 font-medium text-white hover:opacity-80 focus:outline-white lg:w-40"
-        onClick={() => setCounter(counter + 1)}
-      >
-        Count is {counter}
-      </button>
       <div className="prose prose-sm prose-invert prose-p:my-0">
         <h2 className="mb-8 text-center">To clean up template:</h2>
         <ul className="list-none">

@@ -8,12 +8,18 @@ The project is designed to streamline development processes and exclude setup he
 allowing developer to focus on building the application logic without worrying about the underlying infrastructure.
 It's also recommended to maintain your own version of the template to ensure you have a reliable starting point for future React apps.
 
+## Features
+- **Instant Server Start** with ESBuild
+- **Lightning Fast Hot Module Replacement(HMR)** that stays fast regardless of app size
+- ...
+
 ## What's inside?
 
 [Vite](https://vitejs.dev/) for lightning-fast web app bundling and running  
 [React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces  
 [TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding  
 [TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling  
+[Framer-motion](https://www.framer.com/motion/) for creating awesome animations
 [ESLint](https://eslint.org/) with [airbnb-typescript config](https://www.npmjs.com/package/eslint-config-airbnb-typescript) for creating excellent code that meets industry standards  
 [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to ensure that code quality issues are detected before committing changes
 
