@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebulid": "mkdir -p dist",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
