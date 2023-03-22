@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "deploy": "npm run build && node vite.config.js",
     "lint": "eslint .",
     "format": "prettier --write . --ignore-path .eslintignore --loglevel silent",
     "fix-style": "npm run format && npm run lint -- --fix",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
+    "@types/gh-pages": "^3.2.1",
     "@types/node": "^18.15.3",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
@@ -34,6 +36,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.0",
     "postcss": "^8.4.21",
