@@ -7,17 +7,19 @@ import tailwindIcon from './public/tech-icons/Tailwind-icon.svg';
 import typescriptIcon from './public/tech-icons/Typescript-icon.svg';
 import viteIcon from './public/tech-icons/Vite-icon.svg';
 import framermotionIcon from './public/tech-icons/framer-motion-icon.svg';
+import reduxIcon from './public/tech-icons/Redux-icon.svg';
 
 const techWheel = [
   { name: 'Vite', src: viteIcon },
   { name: 'Typescript', src: typescriptIcon },
+  { name: 'Redux', src: reduxIcon },
   { name: 'Tailwind', src: tailwindIcon },
   { name: 'Framer-motion', src: framermotionIcon },
   { name: 'ESLint', src: eslintIcon },
   { name: 'Prettier', src: prettierIcon },
 ];
 
-const mockText = [
+const checkList = [
   'Rename `name` and `author` in `package.json`',
   'Change the `author name` in `LICENSE`',
   'Change the `title` in `index.html`',
@@ -103,10 +105,11 @@ export default function App() {
           </motion.div>
         </div>
       </div>
+
       <div className="prose prose-sm prose-invert prose-p:my-0">
         <h2 className="mb-8 text-center">To clean up template:</h2>
         <ul className="list-none px-0">
-          {mockText.map((item) => (
+          {checkList.map((item) => (
             <li key={item}>
               <label className="prose prose-invert my-0 flex items-center">
                 <input type="checkbox" className="mx-2 rounded-full" />
