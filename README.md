@@ -1,6 +1,9 @@
-<img width="1339" alt="Screenshot 2023-03-14 at 13 10 50" src="https://user-images.githubusercontent.com/47917765/224986187-e7a339c9-5a82-4ae3-a84d-086756658dc7.png">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47917765/227205614-44a1cd68-f504-487f-9755-86648b3ee761.gif" alt="Screen" />
+</p>
 
-# Wellcome to Jumpstart React Template
+
+# Welcome to Jumpstart React Template
 
 This is a starter template that includes the most efficient practices I've learned after struggling with the setup of React apps.
 
@@ -9,9 +12,15 @@ allowing developer to focus on building the application logic without worrying a
 It's also recommended to maintain your own version of the template to ensure you have a reliable starting point for future React apps.
 
 ## Features
-- **Instant Server Start** with ESBuild
-- **Lightning Fast Hot Module Replacement(HMR)** that stays fast regardless of app size
-- ...
+
+- Instant server start with ESBuild
+- Fast Hot Module Replacement (HMR) and automatic code splitting for fast initial load times
+- Full TypeScript support and CSS modules with PostCSS
+- Optimized production build with tree shaking and minification
+- Easy deployment with a built-in production server and static file generation
+- Automatic deployment to GitHub Pages for easy publishing and sharing of your app
+- (Ongoing) Built-in testing with Jest and React Testing Library
+
 
 ## What's inside?
 
@@ -19,7 +28,7 @@ It's also recommended to maintain your own version of the template to ensure you
 [React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces  
 [TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding  
 [TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling  
-[Framer-motion](https://www.framer.com/motion/) for creating awesome animations
+[Framer-motion](https://www.framer.com/motion/) for creating awesome animations  
 [ESLint](https://eslint.org/) with [airbnb-typescript config](https://www.npmjs.com/package/eslint-config-airbnb-typescript) for creating excellent code that meets industry standards  
 [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to ensure that code quality issues are detected before committing changes
 
@@ -35,20 +44,56 @@ Before getting started, make sure you have a package manager like npm installed 
 - Run `npm install` to install dependencies
 - Run `npm run dev` to start the development server
 
-Alternatively, you can download the project files by running `npx degit AlexTsimba/Vite-React-Boilerplate your-project-name`  
+Alternatively, you can download the project files by running command
+```
+npx degit AlexTsimba/Vite-React-Boilerplate your-project-name
+```  
 in your terminal.
 
 ## Linting and Formatting
 
 The following scripts are available for linting and formatting your code:
 
-- `npm run lint` : Runs eslint to check for any syntax errors and coding style issues in your code.
-- `npm run format`: Formats your code using Prettier to ensure consistent and readable code.
-- `npm run fix-style`: Runs `format` and `lint --fix` sequentially to fix any formatting and style issues in your code.
+- `npm run lint` : Runs eslint to check for any syntax errors and coding style issues in your code
+- `npm run format`: Formats your code using Prettier to ensure consistent and readable code
+- `npm run fix-style`: Runs `format` and `lint --fix` sequentially to fix any formatting and style issues in your code
 
 Make sure to have ESLint and Prettier plugins installed in your code editor to see linting and formatting errors and warnings.
 It's recommended to run these scripts frequently during development to ensure that your code meets the standards.
 Additionally, these scripts can be run automatically during your CI/CD pipeline to catch any issues before your code is deployed.
+
+
+## CI/CD pipeline
+
+The project's GitHub Actions workflow automates the build and deployment process, triggered by a push event to the `main` branch.  
+The workflow uses the `peaceiris/actions-gh-pages` action for deployment,  
+pushing the production build files in `./dist` to the `gh-pages` branch.
+
+To enable automatic deployment to GitHub Pages, update the `homepage` field in your `package.json` file to your GitHub Pages site's URL. 
+
+``` js
+// package.json
+
+{
+  "name": "my-app",
+  "homepage": "https://my-username.github.io/my-app",
+  ...
+}
+```
+
+Also, make sure to update the `base` field in `vite.config.ts`
+
+``` js
+// vite.config.ts
+
+export default defineConfig({
+  base: '/my-app',
+  ...
+});
+```
+
+Before deploying, ensure you've granted permissions for workflows to run by setting it to  
+"Read and write" in Settings > Actions > General > Workflow permissions.
 
 ## Contributing
 
