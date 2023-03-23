@@ -51,7 +51,7 @@ export default function App() {
           {techWheel.map((tech, index: number) => {
             return (
               <motion.div
-                className="fixed h-1/4 overflow-hidden"
+                className="fixed h-60 overflow-hidden"
                 key={tech.name}
                 initial="initial"
                 animate={['animate', 'initialHide']}
@@ -105,10 +105,10 @@ export default function App() {
       </div>
       <div className="prose prose-sm prose-invert prose-p:my-0">
         <h2 className="mb-8 text-center">To clean up template:</h2>
-        <ul className="list-none">
+        <ul className="list-none px-0">
           {mockText.map((item) => (
             <li key={item}>
-              <label className="prose prose-invert flex items-center">
+              <label className="prose prose-invert my-0 flex items-center">
                 <input type="checkbox" className="mx-2 rounded-full" />
                 <ReactMarkdown>{item}</ReactMarkdown>
               </label>
