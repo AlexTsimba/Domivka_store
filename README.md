@@ -60,6 +60,21 @@ The `tailwind-config-viewer` package is included to visually display the Tailwin
 You can view the configuration by running the command `npm run tailwind-viewer`.
 [Demo with default Tailwind config](https://rogden.github.io/tailwind-config-viewer/)
 
+The `classnames` package is included in this project to simplify the process of conditionally  
+applying classes to your elements.
+
+``` js
+import classNames from 'classnames';
+
+classNames('foo', 'bar'); // => 'foo bar'
+classNames('foo', { bar: true }); // => 'foo bar'
+classNames({ 'foo-bar': true }); // => 'foo-bar'
+classNames({ 'foo-bar': false }); // => ''
+classNames({ foo: true, bar: true }); // => 'foo bar'
+```
+
+For more information on how to use classnames, please refer to the [official documentation](https://github.com/JedWatson/classnames)
+
 ## Linting and Formatting
 
 The following scripts are available for linting and formatting your code:
