@@ -7,8 +7,9 @@
 
 This is a starter template that includes the most efficient practices I've learned after struggling with the setup of React apps.
 
-The project is designed to streamline development processes and exclude setup headaches,  
+The project is designed to streamline development processes and exclude setup headaches,
 allowing developer to focus on building the application logic without worrying about the underlying infrastructure.
+
 It's also recommended to maintain your own version of the template to ensure you have a reliable starting point for future React apps.
 
 ## Features
@@ -24,12 +25,12 @@ It's also recommended to maintain your own version of the template to ensure you
 
 ## What's inside?
 
-[Vite](https://vitejs.dev/) for lightning-fast web app bundling and running  
-[React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces  
-[TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding  
-[TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling  
-[Framer-motion](https://www.framer.com/motion/) for creating awesome animations  
-[ESLint](https://eslint.org/) with [airbnb-typescript config](https://www.npmjs.com/package/eslint-config-airbnb-typescript) for creating excellent code that meets industry standards  
+[Vite](https://vitejs.dev/) for lightning-fast web app bundling and running
+[React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces
+[TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding
+[TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling
+[Framer-motion](https://www.framer.com/motion/) for creating awesome animations
+[ESLint](https://eslint.org/) with [airbnb-typescript config](https://www.npmjs.com/package/eslint-config-airbnb-typescript) for creating excellent code that meets industry standards
 [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to ensure that code quality issues are detected before committing changes
 
 Additionally, the template comes with preconfigured settings, scripts, and folder structure that allows easy usage right out of the box.
@@ -38,7 +39,7 @@ Additionally, the template comes with preconfigured settings, scripts, and folde
 
 Before getting started, make sure you have a package manager like npm installed on your machine
 
-- [Create a new repository from this template](https://github.com/AlexTsimba/React-ts-tailwind-boilerplate/generate)
+- [Create a new repository from this template](https://github.com/AlexTsimba/react-ts-tailwind-boilerplate/generate)
 - Clone the repository to your local machine using `git clone <repository-url>`
 - Navigate to the project directory by running `cd <project-name>`, then open it by running `code .`
 - Run `npm install` to install dependencies
@@ -46,9 +47,18 @@ Before getting started, make sure you have a package manager like npm installed 
 
 Alternatively, you can download the project files by running command
 ```
-npx degit AlexTsimba/Vite-React-Boilerplate your-project-name
-```  
+npx degit AlexTsimba/react-ts-tailwind-boilerplate project-name
+```
 in your terminal.
+
+## Styling
+
+This template uses TailwindCSS as it's styling framework.
+To fit the styles to your needs, modify the `tailwind.config.cjs` file.
+
+The `tailwind-config-viewer` package is included to visually display the TailwindCSS configuration.
+You can view the configuration by running the command `npm run tailwind-viewer`.
+[Demo with default Tailwind config](https://rogden.github.io/tailwind-config-viewer/)
 
 ## Linting and Formatting
 
@@ -65,18 +75,18 @@ Additionally, these scripts can be run automatically during your CI/CD pipeline 
 
 ## CI/CD pipeline
 
-The project's GitHub Actions workflow automates the build and deployment process, triggered by a push event to the `main` branch.  
-The workflow uses the `peaceiris/actions-gh-pages` action for deployment,  
+The project's GitHub Actions workflow automates the build and deployment process, triggered by a push event to the `main` branch.
+The workflow uses the `peaceiris/actions-gh-pages` action for deployment,
 pushing the production build files in `./dist` to the `gh-pages` branch.
 
-To enable automatic deployment to GitHub Pages, update the `homepage` field in your `package.json` file to your GitHub Pages site's URL. 
+To enable automatic deployment to GitHub Pages, update the `homepage` field in your `package.json` file to your GitHub Pages site's URL.
 
 ``` js
 // package.json
 
 {
-  "name": "my-app",
-  "homepage": "https://my-username.github.io/my-app",
+  "name": "project-name",
+  "homepage": "https://my-username.github.io/project-name",
   ...
 }
 ```
@@ -87,12 +97,12 @@ Also, make sure to update the `base` field in `vite.config.ts`
 // vite.config.ts
 
 export default defineConfig({
-  base: '/my-app',
+  base: '/project-name',
   ...
 });
 ```
 
-Before deploying, ensure you've granted permissions for workflows to run by setting it to  
+Before deploying, ensure you've granted permissions for workflows to run by setting it to
 "Read and write" in Settings > Actions > General > Workflow permissions.
 
 ## Contributing
