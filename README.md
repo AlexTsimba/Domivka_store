@@ -25,13 +25,13 @@ It's also recommended to maintain your own version of the template to ensure you
 
 ## What's inside?
 
-[Vite](https://vitejs.dev/) for lightning-fast web app bundling and running
-[React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces
-[TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding
-[TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling
-[Framer-motion](https://www.framer.com/motion/) for creating awesome animations
-[ESLint](https://eslint.org/) with [airbnb-typescript config](https://www.npmjs.com/package/eslint-config-airbnb-typescript) for creating excellent code that meets industry standards
-[Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to ensure that code quality issues are detected before committing changes
+- [Vite](https://vitejs.dev/) for lightning-fast web app bundling and running
+- [React](https://reactjs.org/) | [React Router](https://reactrouter.com/) | [Redux Toolkit](https://redux-toolkit.js.org/) for building dynamic and scalable user interfaces
+- [TypeScript](https://www.typescriptlang.org/) for type-safe and error-free coding
+- [TailwindCSS](https://tailwindcss.com/) with [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode) for effortless and customizable styling
+- [Framer-motion](https://www.framer.com/motion/) for creating awesome animations
+- [ESLint](https://eslint.org/) with [airbnb-typescript config](https://www.npmjs.com/package/eslint-config-airbnb-typescript) for creating excellent code that meets industry standards
+- [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to ensure that code quality issues are detected before committing changes
 
 Additionally, the template comes with preconfigured settings, scripts, and folder structure that allows easy usage right out of the box.
 
@@ -56,8 +56,8 @@ in your terminal.
 This template uses TailwindCSS as it's styling framework.
 To fit the styles to your needs, modify the `tailwind.config.cjs` file.
 
-The `tailwind-config-viewer` package is included to visually display the TailwindCSS configuration.
-You can view the configuration by running the command `npm run tailwind-viewer`.
+The `tailwind-config-viewer` package is included to visually display the TailwindCSS configuration.  
+You can view the configuration by running the command `npm run tailwind-viewer`.  
 [Demo with default Tailwind config](https://rogden.github.io/tailwind-config-viewer/)
 
 ## Linting and Formatting
@@ -102,7 +102,7 @@ export default defineConfig({
 });
 ```
 
-Before deploying, ensure you've granted permissions for workflows to run by setting it to
+Before deploying, ensure you've granted permissions for workflows to run by setting it to. 
 "Read and write" in Settings > Actions > General > Workflow permissions.
 
 ## Contributing
