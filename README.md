@@ -2,7 +2,6 @@
   <img src="https://user-images.githubusercontent.com/47917765/227205614-44a1cd68-f504-487f-9755-86648b3ee761.gif" alt="Screen" />
 </p>
 
-
 # Welcome to Jumpstart React Template
 
 This is a starter template that includes the most efficient practices I've learned after struggling with the setup of React apps.
@@ -21,7 +20,6 @@ It's also recommended to maintain your own version of the template to ensure you
 - Easy deployment with a built-in production server and static file generation
 - Automatic deployment to GitHub Pages for easy publishing and sharing of your app
 - (Ongoing) Built-in testing with Jest and React Testing Library
-
 
 ## What's inside?
 
@@ -46,9 +44,11 @@ Before getting started, make sure you have a package manager like npm installed 
 - Run `npm run dev` to start the development server
 
 Alternatively, you can download the project files by running command
+
 ```
 npx degit AlexTsimba/react-ts-tailwind-boilerplate project-name
 ```
+
 in your terminal.
 
 ## Styling
@@ -56,8 +56,8 @@ in your terminal.
 This template uses TailwindCSS as it's styling framework.
 To fit the styles to your needs, modify the `tailwind.config.cjs` file.
 
-The `tailwind-config-viewer` package is included to visually display the TailwindCSS configuration.  
-You can view the configuration by running the command `npm run tailwind-viewer`.  
+The `tailwind-config-viewer` package is included to visually display the TailwindCSS configuration.
+You can view the configuration by running the command `npm run tailwind-viewer`.
 [Demo with default Tailwind config](https://rogden.github.io/tailwind-config-viewer/)
 
 ## Linting and Formatting
@@ -72,7 +72,6 @@ Make sure to have ESLint and Prettier plugins installed in your code editor to s
 It's recommended to run these scripts frequently during development to ensure that your code meets the standards.
 Additionally, these scripts can be run automatically during your CI/CD pipeline to catch any issues before your code is deployed.
 
-
 ## CI/CD pipeline
 
 The project's GitHub Actions workflow automates the build and deployment process, triggered by a push event to the `main` branch.
@@ -81,7 +80,7 @@ pushing the production build files in `./dist` to the `gh-pages` branch.
 
 To enable automatic deployment to GitHub Pages, update the `homepage` field in your `package.json` file to your GitHub Pages site's URL.
 
-``` js
+```js
 // package.json
 
 {
@@ -93,7 +92,7 @@ To enable automatic deployment to GitHub Pages, update the `homepage` field in y
 
 Also, make sure to update the `base` field in `vite.config.ts`
 
-``` js
+```js
 // vite.config.ts
 
 export default defineConfig({
@@ -102,8 +101,19 @@ export default defineConfig({
 });
 ```
 
-Before deploying, ensure you've granted permissions for workflows to run by setting it to. 
+Before deploying, ensure you've granted permissions for workflows to run by setting it to.
 "Read and write" in Settings > Actions > General > Workflow permissions.
+
+**Manual deployment**
+
+In addition to the automated deployment process, you can also manually deploy your app's current version by executing the following command in your terminal:
+
+```
+npm run deploy
+```
+
+This command will initiate the build process and deploy the generated files to your GitHub Pages site, using the same configuration as the automated process.
+Please be aware that running this command will replace the currently deployed version of your app, so make sure to thoroughly test your changes before deploying manually.
 
 ## Contributing
 
