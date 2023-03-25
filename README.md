@@ -43,13 +43,11 @@ Before getting started, make sure you have a package manager like npm installed 
 - Run `npm install` to install dependencies
 - Run `npm run dev` to start the development server
 
-Alternatively, you can download the project files by running command
+Alternatively, you can download the project files by running the following command in your terminal:
 
 ```
 npx degit AlexTsimba/react-ts-tailwind-boilerplate project-name
 ```
-
-in your terminal.
 
 ## Styling
 
@@ -58,7 +56,19 @@ To fit the styles to your needs, modify the `tailwind.config.cjs` file.
 
 The `tailwind-config-viewer` package is included to visually display the TailwindCSS configuration.
 You can view the configuration by running the command `npm run tailwind-viewer`.
-[Demo with default Tailwind config](https://rogden.github.io/tailwind-config-viewer/)
+[Demo with default config](https://rogden.github.io/tailwind-config-viewer/)
+
+The `classnames` package is included for conditional CSS rules.
+
+``` js
+import classNames from 'classnames';
+classNames('foo', 'bar'); // => 'foo bar'
+classNames('foo', { bar: true }); // => 'foo bar'
+classNames({ 'foo-bar': false }); // => ''
+classNames({ foo: true, bar: false }); // => 'foo'
+```
+
+For more information on how to use classnames, please read the [official documentation](https://github.com/JedWatson/classnames)
 
 ## Linting and Formatting
 
@@ -77,6 +87,9 @@ Additionally, these scripts can be run automatically during your CI/CD pipeline 
 The project's GitHub Actions workflow automates the build and deployment process, triggered by a push event to the `main` branch.
 The workflow uses the `peaceiris/actions-gh-pages` action for deployment,
 pushing the production build files in `./dist` to the `gh-pages` branch.
+
+Before deploying, ensure you've granted permissions for workflows to run by setting it to.
+"Read and write" in Settings > Actions > General > Workflow permissions.
 
 To enable automatic deployment to GitHub Pages, update the `homepage` field in your `package.json` file to your GitHub Pages site's URL.
 
@@ -101,9 +114,6 @@ export default defineConfig({
 });
 ```
 
-Before deploying, ensure you've granted permissions for workflows to run by setting it to.
-"Read and write" in Settings > Actions > General > Workflow permissions.
-
 **Manual deployment**
 
 In addition to the automated deployment process, you can also manually deploy your app's current version by executing the following command in your terminal:
@@ -113,7 +123,6 @@ npm run deploy
 ```
 
 This command will initiate the build process and deploy the generated files to your GitHub Pages site, using the same configuration as the automated process.
-Please be aware that running this command will replace the currently deployed version of your app, so make sure to thoroughly test your changes before deploying manually.
 
 ## Contributing
 
